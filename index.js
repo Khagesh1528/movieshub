@@ -1,14 +1,15 @@
 const express = require('express');
+const path = require('path')
 
 const PORT = process.env.PORT || 4000;
 
 const app = express();
 
 app.set('view engine','ejs');
-app.set('views','./views')
+app.set('views',path.join(__dirname,'views'));
 
 app.get('/',function(req,res){
-    res.send('<h1>Its Working Fine</h1>')
+    return res.render('index');
 })
 
 app.listen(PORT,function(error){
