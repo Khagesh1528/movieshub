@@ -8,7 +8,7 @@ app.set('view engine','ejs');
 app.set('views','./views')
 
 app.get('/',function(req,res){
-    res.render('index')
+    res.send('<h1>Its Working Fine</h1>')
 })
 
 app.listen(PORT,function(error){
